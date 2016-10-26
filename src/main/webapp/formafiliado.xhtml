@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="title">
+                <h1 align="center">GESTIONAR AFILIADO</h1>
+            </ui:define>
+
+            <ui:define name="body">
+                <h:form id="AfiliadoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_tipoDocumento}" for="tipoDocumento" />
+                        <p:inputText id="tipoDocumento" value="#{afiliadoController.afiliado.tipoDocumento}" title="#{bundle.CreateAfiliadoTitle_tipoDocumento}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_identificacion}" for="identificacion" />
+                        <p:inputText id="identificacion" value="#{afiliadoController.afiliado.identificacion}" title="#{bundle.CreateAfiliadoTitle_identificacion}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_primerApellido}" for="primerApellido" />
+                        <p:inputText id="primerApellido" value="#{afiliadoController.afiliado.primerApellido}" title="#{bundle.CreateAfiliadoTitle_primerApellido}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_segundoApellido}" for="segundoApellido" />
+                        <p:inputText id="segundoApellido" value="#{afiliadoController.afiliado.segundoApellido}" title="#{bundle.CreateAfiliadoTitle_segundoApellido}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_primerNombre}" for="primerNombre" />
+                        <p:inputText id="primerNombre" value="#{afiliadoController.afiliado.primerNombre}" title="#{bundle.CreateAfiliadoTitle_primerNombre}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_segundoNombre}" for="segundoNombre" />
+                        <p:inputText id="segundoNombre" value="#{afiliadoController.afiliado.segundoNombre}" title="#{bundle.CreateAfiliadoTitle_segundoNombre}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_fechaNacimiento}" for="fechaNacimiento" />
+                        <p:calendar id="fechaNacimiento" pattern="MM/dd/yyyy" value="#{afiliadoController.afiliado.fechaNacimiento}" title="#{bundle.EditAfiliadoTitle_fechaNacimiento}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_edad}" for="edad" />
+                        <p:inputText id="edad" value="#{afiliadoController.afiliado.edad}" title="#{bundle.CreateAfiliadoTitle_edad}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_sexo}" for="sexo" />
+                        <p:inputText id="sexo" value="#{afiliadoController.afiliado.sexo}" title="#{bundle.CreateAfiliadoTitle_sexo}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_codDepartamento}" for="codDepartamento" />
+                        <p:inputText id="codDepartamento" value="#{afiliadoController.afiliado.codDepartamento}" title="#{bundle.CreateAfiliadoTitle_codDepartamento}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_codMunicipio}" for="codMunicipio" />
+                        <p:inputText id="codMunicipio" value="#{afiliadoController.afiliado.codMunicipio}" title="#{bundle.CreateAfiliadoTitle_codMunicipio}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_zona}" for="zona" />
+                        <p:inputText id="zona" value="#{afiliadoController.afiliado.zona}" title="#{bundle.CreateAfiliadoTitle_zona}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_telefono}" for="telefono" />
+                        <p:inputText id="telefono" value="#{afiliadoController.afiliado.telefono}" title="#{bundle.CreateAfiliadoTitle_telefono}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_ubicacion}" for="ubicacion" />
+                        <p:inputText id="ubicacion" value="#{afiliadoController.afiliado.ubicacion}" title="#{bundle.CreateAfiliadoTitle_ubicacion}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_estado}" for="estado" />
+                        <p:inputText id="estado" value="#{afiliadoController.afiliado.estado}" title="#{bundle.CreateAfiliadoTitle_estado}" />
+                        <p:outputLabel value="#{bundle.CreateAfiliadoLabel_itemIDafiliado}" for="itemIDafiliado" />
+                        <p:inputText id="itemIDafiliado" value="#{afiliadoController.afiliado.itemIDafiliado}" title="#{bundle.CreateAfiliadoTitle_itemIDafiliado}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{afiliadoController.registrar()}" value="#{bundle.Save}" />
+                </h:panelGroup>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

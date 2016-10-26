@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AfiliadoViewDlg" widgetVar="AfiliadoViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewAfiliadoTitle}">
+            <h:form id="AfiliadoViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{afiliadoController.selected != null}">
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_tipoDocumento}"/>
+                        <h:outputText value="#{afiliadoController.selected.tipoDocumento}" title="#{bundle.ViewAfiliadoTitle_tipoDocumento}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_identificacion}"/>
+                        <h:outputText value="#{afiliadoController.selected.identificacion}" title="#{bundle.ViewAfiliadoTitle_identificacion}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_primerApellido}"/>
+                        <h:outputText value="#{afiliadoController.selected.primerApellido}" title="#{bundle.ViewAfiliadoTitle_primerApellido}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_segundoApellido}"/>
+                        <h:outputText value="#{afiliadoController.selected.segundoApellido}" title="#{bundle.ViewAfiliadoTitle_segundoApellido}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_primerNombre}"/>
+                        <h:outputText value="#{afiliadoController.selected.primerNombre}" title="#{bundle.ViewAfiliadoTitle_primerNombre}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_segundoNombre}"/>
+                        <h:outputText value="#{afiliadoController.selected.segundoNombre}" title="#{bundle.ViewAfiliadoTitle_segundoNombre}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_fechaNacimiento}"/>
+                        <h:outputText value="#{afiliadoController.selected.fechaNacimiento}" title="#{bundle.ViewAfiliadoTitle_fechaNacimiento}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_edad}"/>
+                        <h:outputText value="#{afiliadoController.selected.edad}" title="#{bundle.ViewAfiliadoTitle_edad}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_sexo}"/>
+                        <h:outputText value="#{afiliadoController.selected.sexo}" title="#{bundle.ViewAfiliadoTitle_sexo}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_codDepartamento}"/>
+                        <h:outputText value="#{afiliadoController.selected.codDepartamento}" title="#{bundle.ViewAfiliadoTitle_codDepartamento}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_codMunicipio}"/>
+                        <h:outputText value="#{afiliadoController.selected.codMunicipio}" title="#{bundle.ViewAfiliadoTitle_codMunicipio}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_zona}"/>
+                        <h:outputText value="#{afiliadoController.selected.zona}" title="#{bundle.ViewAfiliadoTitle_zona}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_telefono}"/>
+                        <h:outputText value="#{afiliadoController.selected.telefono}" title="#{bundle.ViewAfiliadoTitle_telefono}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_ubicacion}"/>
+                        <h:outputText value="#{afiliadoController.selected.ubicacion}" title="#{bundle.ViewAfiliadoTitle_ubicacion}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_estado}"/>
+                        <h:outputText value="#{afiliadoController.selected.estado}" title="#{bundle.ViewAfiliadoTitle_estado}"/>
+                        <h:outputText value="#{bundle.ViewAfiliadoLabel_itemIDafiliado}"/>
+                        <h:outputText value="#{afiliadoController.selected.itemIDafiliado}" title="#{bundle.ViewAfiliadoTitle_itemIDafiliado}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="AfiliadoViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
